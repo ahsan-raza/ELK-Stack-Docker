@@ -1,0 +1,12 @@
+version: '2'
+services:
+  parser:
+    image: nginx
+    container_name: nginx
+    ports:
+    - 8009:80
+    logging:
+      driver: syslog
+      options:
+        syslog-address: "tcp://127.0.0.1:5000"
+        tag: "nginx"
