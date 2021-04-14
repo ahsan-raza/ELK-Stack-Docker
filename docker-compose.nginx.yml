@@ -6,7 +6,7 @@ services:
     ports:
     - 8009:80
     logging:
-      driver: syslog
+      driver: gelf
       options:
-        syslog-address: "tcp://127.0.0.1:5000"
+        gelf-address: "udp://192.168.2.237:12201"
         tag: "nginx"
